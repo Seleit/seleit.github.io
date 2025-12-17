@@ -70,7 +70,7 @@
 
         /* NAVIGATION */
         nav {
-            position: sticky;
+            position: sticky; /* Sticky on Desktop */
             top: 0;
             background-color: #ffffff;
             z-index: 100;
@@ -152,7 +152,6 @@
             max-width: 100%; 
         }
 
-        /* Style for the credit text under movies */
         .media-credit {
             font-size: 0.85rem;
             color: #555;
@@ -187,7 +186,7 @@
             display: flex;
             justify-content: center; 
             gap: 40px; 
-            align-items: flex-start; /* Changed to flex-start so credits hang properly */
+            align-items: flex-start;
             width: 100%;
             margin-top: 10px; 
         }
@@ -211,7 +210,7 @@
         /* FUNDING LOGOS STYLE */
         .funding-row {
             display: flex;
-            justify-content: space-between; /* Spreads them out to fill width */
+            justify-content: space-between;
             align-items: center;
             gap: 20px;
             margin-top: 40px;
@@ -220,7 +219,7 @@
         }
 
         .funding-logo {
-            width: 30%; /* Forces them to take up ~1/3 of the width each */
+            width: 30%;
             height: auto;
             object-fit: contain;
             display: block;
@@ -289,7 +288,6 @@
             width: 100%;
             height: 100%;
             border: 0;
-            /* Grayscale filter removed to show RED pin */
         }
 
         /* FOOTER */
@@ -308,16 +306,49 @@
             border-bottom: 1px solid #fff;
         }
 
-        /* RESPONSIVE */
+        /* --- MOBILE OPTIMIZATIONS (The Fix) --- */
         @media (max-width: 768px) {
+            /* 1. Fix the Header & Logo */
             h1.lab-title { font-size: 2rem; }
-            nav { flex-direction: column; gap: 15px; }
-            .hero { padding: 40px 0; }
-            .research-item h3 { font-size: 1.4rem; }
-            .media-row, .video-container, .funding-row { flex-direction: column; }
-            .media-half, .video-wrapper, .video-wrapper img, .funding-logo { width: 100%; height: auto; margin-bottom: 20px; }
-            .media-caption { max-width: 100%; }
             .lab-logo { max-width: 100%; }
+            
+            /* 2. Fix the Navigation */
+            nav { 
+                flex-direction: column; 
+                gap: 15px; 
+                position: relative; /* CRITICAL: Un-stick the menu on mobile so it doesn't block the screen */
+                padding: 10px 0;
+            }
+
+            /* 3. Fix Text Readability */
+            .hero p, 
+            .research-item p {
+                text-align: left; /* Removes ugly 'rivers' of whitespace on phones */
+                text-justify: auto;
+            }
+            
+            /* 4. Tighter Spacing */
+            .hero { padding: 40px 0; }
+            .research-item { padding: 40px 15px; } /* Less padding on sides */
+            
+            /* 5. Stack Media Elements */
+            .media-row, .video-container, .funding-row { 
+                flex-direction: column; 
+            }
+            
+            .media-half, 
+            .video-wrapper, 
+            .video-wrapper img, 
+            .funding-logo { 
+                width: 100%; 
+                height: auto; 
+                margin-bottom: 20px; 
+            }
+            
+            .media-caption { max-width: 100%; }
+            
+            /* 6. Fix Map on Mobile */
+            .map-wrapper { height: 300px; }
         }
     </style>
 </head>
