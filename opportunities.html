@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities | Evo-Devo-Tempo Lab</title>
+    <style>
+        :root { color-scheme: light; }
+        * { box-sizing: border-box; }
+        html, body { font-family: "American Typewriter", "Courier New", serif; background-color: #ffffff !important; color: #000000; margin: 0; padding: 0; line-height: 1.6; height: 100%; }
+        a { color: #000000; text-decoration: none; border-bottom: 1px solid transparent; transition: border-bottom 0.3s; }
+        a:hover { border-bottom: 1px solid #000; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 60px 0 40px; border-bottom: 4px solid #000; background-color: #ffffff; }
+        .lab-logo { display: block; margin: 0 auto 10px auto; max-width: 500px; width: 100%; height: auto; }
+        h1.lab-title { font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; font-weight: normal; }
+        
+        nav { position: sticky; top: 0; background-color: #ffffff; z-index: 1000; border-bottom: 1px solid #000; }
+        .nav-container { display: flex; justify-content: center; align-items: center; padding: 20px 0; max-width: 900px; margin: 0 auto; }
+        .nav-links { display: flex; gap: 25px; font-weight: bold; font-size: 1.0rem; letter-spacing: 1px; list-style: none; margin: 0; padding: 0; }
+        .menu-toggle { display: none; }
+
+        section { padding: 40px 0 80px; }
+        h2.section-title { font-size: 2.5rem; text-align: center; margin-top: 40px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 3px; }
+        h3.job-title { font-size: 1.5rem; margin-top: 40px; margin-bottom: 10px; font-weight: bold; }
+        
+        .job-block { margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+        .job-block:last-child { border: none; }
+        .job-list { margin-left: 20px; }
+        
+        footer { text-align: center; padding: 60px; border-top: 4px solid #000; font-size: 0.9rem; margin-top: 50px; background-color: #000; color: #fff; }
+        footer a { color: #fff; border-bottom: 1px solid #fff; }
+
+        @media (max-width: 768px) {
+            header { padding: 30px 0 20px; }
+            h1.lab-title { font-size: 1.8rem; margin-top: 10px; }
+            .lab-logo { max-width: 90%; }
+            nav { padding: 10px 20px; position: relative; }
+            .nav-container { padding: 0; width: 100%; justify-content: space-between; margin: 0; }
+            .menu-toggle { display: block; font-size: 2rem; cursor: pointer; background: none; border: none; padding: 0; line-height: 1; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background-color: #ffffff; border-bottom: 2px solid #000; padding: 20px; gap: 15px; text-align: right; box-shadow: 0 5px 10px rgba(0,0,0,0.1); }
+            .nav-links.active { display: flex; }
+            .nav-links a { display: block; padding: 10px 0; font-size: 1.2rem; border-bottom: 1px solid #eee; }
+            .container { padding: 15px; }
+            h2.section-title { font-size: 2rem; margin-top: 40px; margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="header.png" alt="Lab Logo" class="lab-logo"></a>
+            <h1 class="lab-title">Evo-Devo-Tempo Lab</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#research">RESEARCH</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="opportunities.html">OPPORTUNITIES</a></li>
+                <li><a href="resources.html">RESOURCES</a></li>
+                <li><a href="index.html#publications">PUBLICATIONS</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="container">
+        <h2 class="section-title">Open Positions</h2>
+
+        <div class="job-block">
+            <h3 class="job-title">PhD researchers</h3>
+            <p>We are looking for curious and kind souls to join our team at the PhD level. If you are interested in our work as an experimental, computational, or hybrid researcher please apply via email and attach:</p>
+            <ol class="job-list">
+                <li>CV</li>
+                <li>Motivation for joining the lab</li>
+                <li>Contact information for 3 references</li>
+            </ol>
+        </div>
+
+        <div class="job-block">
+            <h3 class="job-title">Technician/Lab officer</h3>
+            <p>We are looking for a curious and kind soul to join our team. Please check the job description <a href="#" style="text-decoration: underline;">here</a>. If you fulfil the criteria listed and are interested in our work please apply via email and attach the following:</p>
+            <ol class="job-list">
+                <li>CV</li>
+                <li>List of techniques you are competent in</li>
+            </ol>
+        </div>
+
+        <h2 class="section-title">Post-Doctoral Level</h2>
+
+        <div class="job-block">
+            <p>If you are interested in our work at the post-doctoral level:</p>
+            <h3 class="job-title">Post-Doc researcher</h3>
+            <p>Please get in touch by email. Attach your:</p>
+            <ol class="job-list">
+                <li>CV</li>
+                <li>Motivation for joining the lab</li>
+                <li>Contact information for 3 references</li>
+            </ol>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 Evo-Devo-Tempo Lab.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
