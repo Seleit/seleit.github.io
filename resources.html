@@ -23,6 +23,15 @@
         section { padding: 40px 0 80px; }
         h2.section-title { font-size: 2.5rem; text-align: center; margin-top: 40px; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 3px; }
         
+        /* New Styles for Resource Folders */
+        details.folder { margin-bottom: 25px; text-align: left; border: 1px solid #eee; padding: 20px; background-color: #fafafa; transition: border-color 0.3s ease; }
+        details.folder:hover { border-color: #000; }
+        details.folder summary { font-size: 1.4rem; font-weight: bold; cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; }
+        details.folder summary::-webkit-details-marker { display: none; }
+        .file-list { margin-top: 15px; padding-left: 30px; list-style-type: none; }
+        .file-list li { margin-bottom: 10px; }
+        .file-list a { text-decoration: underline; }
+
         footer { text-align: center; padding: 60px; border-top: 4px solid #000; font-size: 0.9rem; margin-top: 50px; background-color: #000; color: #fff; }
         footer a { color: #fff; border-bottom: 1px solid #fff; }
 
@@ -67,8 +76,23 @@
 
     <section class="container">
         <h2 class="section-title">Resources</h2>
-        <div style="text-align: center; padding: 60px; border: 1px dashed #000;">
-            </div>
+        
+        <div style="padding: 20px;">
+            <p style="text-align: center; margin-bottom: 40px;">Select a folder below to view and download our lab protocols.</p>
+
+            <details class="folder">
+                <summary>📁 Medaka Protocols</summary>
+                <ul class="file-list">
+                    </ul>
+            </details>
+
+            <details class="folder">
+                <summary>📁 Eel Protocols</summary>
+                <ul class="file-list">
+                    </ul>
+            </details>
+        </div>
+
     </section>
 
     <footer>
