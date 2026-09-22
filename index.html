@@ -52,9 +52,13 @@
         .media-row { display: flex; justify-content: center; align-items: center; gap: 20px; width: 100%; margin-top: 20px; }
         .media-half { width: 48%; height: auto; object-fit: contain; }
         .media-full { width: 100%; height: auto; margin-top: 15px; }
-        .video-container { display: flex; justify-content: center; gap: 40px; align-items: flex-start; width: 100%; margin-top: 10px; }
-        .video-wrapper { display: flex; flex-direction: column; align-items: center; width: auto; flex: 0 1 auto; }
-        .video-wrapper img { height: 300px; width: auto; max-width: 100%; object-fit: contain; }
+        /* Section 3 movies: stacked, each as wide as the text column, legend below */
+        .movie-stack { width: 100%; margin-top: 30px; }
+        .movie-item { width: 100%; margin-bottom: 50px; }
+        .movie-item:last-child { margin-bottom: 0; }
+        .movie-item img, .movie-item video { display: block; width: 100%; height: auto; }
+        .movie-legend { font-size: 0.72rem; line-height: 1.4; color: #333; text-align: left; margin: 8px 0 0; }
+        .movie-item .media-credit { display: inline; font-size: inherit; margin: 0; }
 
         /* PUBS & FOOTER */
         .pub-year { font-size: 2rem; border-bottom: 2px solid #000; margin-top: 60px; margin-bottom: 30px; padding-bottom: 10px; }
@@ -92,8 +96,9 @@
             .hero p, .research-item p { font-size: 1.1rem; line-height: 1.5; text-align: left; }
             .research-item { padding: 30px 0; gap: 15px; }
             .research-item h3 { font-size: 1.4rem; margin-bottom: 5px; }
-            .media-row, .video-container, .funding-row { flex-direction: column; gap: 15px; margin-top: 15px; }
-            .media-half, .video-wrapper, .video-wrapper img, .funding-logo { width: 100%; height: auto; margin-bottom: 0; }
+            .media-row, .funding-row { flex-direction: column; gap: 15px; margin-top: 15px; }
+            .media-half, .funding-logo { width: 100%; height: auto; margin-bottom: 0; }
+            .movie-item { margin-bottom: 30px; }
             .media-caption { max-width: 100%; margin-top: 10px; }
             .map-wrapper { height: 300px; }
         }
@@ -162,20 +167,21 @@
                 <p>
                     The lab will continue developing novel CRISPR/Cas9-mediated knock-in techniques in teleosts. Using our tools, we will generate KI lines for all the major vertebrate signalling pathways (WNT, FGF, NOTCH, HIPPO, ERK) and quantitatively image endogenous protein dynamics <i>in toto</i> during early embryonic development in medaka. Our goal is to link expression histories/heterogeneities with cell fate specification, both under normal conditions and in targeted perturbations.
                 </p>
-                <div class="video-container">
-                    <div class="video-wrapper">
-                        <div class="media-caption">
-                            Maternal expression of endogenous mScarlet-PCNA protein during early divisions in medaka embryos
+                <div class="movie-stack">
+                    <div class="movie-item">
+                        <video autoplay loop muted playsinline>
+                            <source src="SuppMov1_web.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="movie-legend">
+                            Medaka embryo imaged from late blastula (St. 11) to mid-gastrulation (St. 15). Yap1-mGL (green). Yap1-mGL expression is widespread during early gastrulation stages and progressively localises to the nucleus in the EVL and ventral portions of the embryo throughout early stages of epiboly. Scale bar = 100 µm. Time in hours. <span class="media-credit">Imaging by: Simon Knoblich</span>
                         </div>
-                        <img src="movie2.gif" alt="Movie 2">
-                        <div class="media-credit">Imaging by: Sapna Chapra</div>
                     </div>
-                    <div class="video-wrapper">
-                        <div class="media-caption">
-                            Zygotic expression of endogenous YAP1A-mGL protein at the onset of gastrulation in medaka embryos
+                    <div class="movie-item">
+                        <img src="movie2.gif" alt="Movie 2">
+                        <div class="movie-legend">
+                            Maternal expression of endogenous mScarlet-PCNA protein during early divisions in medaka embryos. <span class="media-credit">Imaging by: Sapna Chapra</span>
                         </div>
-                        <img src="movie3.gif" alt="Movie 3">
-                        <div class="media-credit">Imaging by: Simon Knoblich</div>
                     </div>
                 </div>
             </div>
@@ -186,6 +192,11 @@
         <h2 class="section-title">Publications</h2>
         
         <div class="pub-year">2026</div>
+        <div class="publication">
+            <span class="publication-title"><a href="https://doi.org/10.64898/2026.09.15.751690" target="_blank">Spatio-temporal visualisation and manipulation of endogenous Yap1 in medaka</a></span>
+            <span class="publication-authors">Seleit A.*<sup>†</sup>, Asaoka Y.<sup>†</sup>, Knoblich S., Lederer L., Oozono C., Oga A., Oiso A., Furutani-Seiki M., Aulehla A. (*co-corresponding author, <sup>†</sup>co-first author)</span>
+            <span class="publication-journal">bioRxiv 2026.09.15.751690 (2026)</span>
+        </div>
         <div class="publication">
             <span class="publication-title"><a href="https://doi.org/10.64898/2026.04.29.721344" target="_blank">Heterochrony of axis segmentation underlies extreme morphogenesis in the Japanese eel</a></span>
             <span class="publication-authors">Seleit A.*, Nomura K., Hilgers L., Hiller M., Naruse K., Kazeto Y., Aulehla A. (*co-corresponding author)</span>
